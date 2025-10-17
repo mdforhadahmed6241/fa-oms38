@@ -1,0 +1,311 @@
+/* --- Global Styles --- */
+.oms-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+}
+
+.oms-form-group {
+    margin-bottom: 15px;
+}
+
+.oms-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+}
+
+.oms-form-group input[type="text"],
+.oms-form-group input[type="number"],
+.oms-form-group input[type="email"],
+.oms-form-group input[type="password"],
+.oms-form-group textarea,
+.oms-form-group select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+}
+
+.oms-switch{position:relative;display:inline-block;width:60px;height:34px}
+.oms-switch input{opacity:0;width:0;height:0}
+.oms-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s}
+.oms-slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:#fff;-webkit-transition:.4s;transition:.4s}
+input:checked+.oms-slider{background-color:#2196F3}
+input:focus+.oms-slider{box-shadow:0 0 1px #2196F3}
+input:checked+.oms-slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px)}
+.oms-slider.round{border-radius:34px}
+.oms-slider.round:before{border-radius:50%}
+
+/* --- Summary Page Styles --- */
+.oms-summary-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+.oms-summary-card h3, .oms-status-card h4 {
+    margin-top: 0;
+    font-size: 16px;
+}
+.oms-summary-card .oms-main-stat {
+    font-size: 36px;
+    font-weight: 600;
+    color: #2271b1;
+    margin-bottom: 8px;
+}
+.oms-status-card .oms-status-count {
+    font-size: 28px;
+    font-weight: 600;
+}
+.oms-comparison.increase { color: #2ca02c; }
+.oms-comparison.decrease { color: #d63638; }
+.oms-comparison.neutral { color: #646970; }
+.oms-date-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* --- Order List Page Styles --- */
+.wp-list-table {
+    margin-top: 20px;
+}
+.wp-list-table th, .wp-list-table td {
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+
+.oms-date-id, .oms-customer-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.oms-item-list { display: flex; flex-direction: column; gap: 10px; }
+.oms-item-details { display: flex; flex-direction: row; align-items: center; gap: 10px; }
+.oms-item-image { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; border: 1px solid #ddd; }
+.oms-item-sku { display: flex; flex-direction: column; }
+.oms-status-badge { display: inline-block; padding: 4px 10px; border-radius: 15px; font-size: 12px; font-weight: 600; color: #fff; margin-top: 5px; text-align: center; max-width: 120px; }
+.status-processing { background-color: #2271b1; }
+.status-completed { background-color: #00a32a; }
+.status-on-hold { background-color: #f0ad4e; }
+.status-failed { background-color: #d9534f; }
+.status-cancelled { background-color: #777; }
+.status-refunded { background-color: #333; }
+.status-pending { background-color: #ffba00; color: #333; }
+/* Custom status colors are injected from PHP, this is a fallback */
+.oms-status-badge.status-no-response { background-color: #7f8c8d; }
+.oms-status-badge.status-shipped { background-color: #2980b9; }
+.oms-status-badge.status-delivered { background-color: #27ae60; }
+.oms-status-badge.status-returned { background-color: #c0392b; }
+.oms-status-badge.status-partial-return { background-color: #d35400; }
+.oms-status-badge.status-warehouse { background-color: #8e44ad; }
+.oms-status-badge.status-exchange { background-color: #16a085; }
+.oms-status-badge.status-ready-to-ship { background-color: #f39c12; }
+
+.oms-filter-bar { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; }
+.oms-filter-bar .search-box { display: flex; gap: 5px; }
+
+/* -- UPDATED: Courier Status Column Styles -- */
+.oms-courier-status-cell {
+    text-align: right;
+}
+.oms-courier-status-cell .button {
+    margin-bottom: 5px;
+}
+.oms-courier-status-cell .oms-parcel-id {
+    display: block;
+    font-size: 12px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.2;
+}
+.oms-courier-status-cell .oms-parcel-id.error {
+    color: #d63638;
+    font-weight: bold;
+}
+
+
+/* --- Order Details Page Styles --- */
+.oms-order-details-wrap h1 { margin-bottom: 10px; }
+
+.oms-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.oms-status-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.oms-layout-grid-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.oms-customer-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.oms-form-group.oms-full-width { grid-column: 1 / -1; }
+
+.oms-input-with-icon {
+    position: relative;
+    display: flex;
+}
+.oms-input-with-icon input {
+    padding-right: 35px;
+}
+.oms-input-icon {
+    position: absolute;
+    right: 1px;
+    top: 1px;
+    bottom: 1px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-left: 1px solid #ddd;
+    border-radius: 0 3px 3px 0;
+    text-decoration: none;
+}
+.oms-input-icon .dashicons {
+    color: #2271b1;
+}
+
+/* Customer History */
+.oms-customer-history-stats { display: flex; flex-direction: column; gap: 8px; }
+.oms-stat-item { display: flex; justify-content: space-between; align-items: center; font-size: 14px; padding-bottom: 8px; border-bottom: 1px solid #f0f0f0; }
+.oms-stat-item:last-child { border-bottom: none; }
+.oms-stat-item strong { font-weight: 600; }
+.oms-total-value strong { color: #2ca02c; font-size: 16px; }
+
+/* Ordered Products List */
+#oms-ordered-products { display: flex; flex-direction: column; gap: 15px; }
+.oms-ordered-product-item { display: grid; grid-template-columns: auto 1fr auto; gap: 15px; align-items: center; padding: 10px; border: 1px solid #eee; border-radius: 6px; }
+.oms-ordered-product-item img { width: 60px; height: 60px; object-fit: cover; border-radius: 4px; }
+.oms-ordered-item-details { display: flex; flex-direction: column; }
+.oms-product-name { font-weight: 600; }
+.oms-product-sku { font-size: 12px; color: #666; }
+.oms-item-controls { display: flex; align-items: center; gap: 15px; }
+.oms-quantity-control, .oms-price-control, .oms-total-control { display: flex; align-items: center; gap: 5px; }
+.oms-quantity-control input { width: 50px; text-align: center; }
+.oms-price-control input { width: 80px; }
+.oms-item-total { font-weight: 600; }
+.oms-remove-item-btn { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; border-radius: 50%; width: 28px; height: 28px; line-height: 26px; padding: 0; font-size: 18px; cursor: pointer; }
+
+/* Product Search Panel */
+.oms-product-search-box input { width: 100%; padding: 10px; font-size: 14px; }
+#oms-search-results { max-height: 400px; overflow-y: auto; margin-top: 10px; }
+.oms-search-result-item { display: grid; grid-template-columns: auto 1fr; gap: 10px; padding: 10px; cursor: pointer; border-radius: 4px; border-bottom: 1px solid #eee; }
+.oms-search-result-item:hover { background-color: #f0f6fc; }
+.oms-search-result-item img { width: 50px; height: 50px; object-fit: cover; border-radius: 4px; }
+.oms-search-result-item-details { display: flex; flex-direction: column; }
+.oms-search-result-item-details .oms-product-name { font-weight: 600; }
+.oms-search-result-item-details .oms-product-sku, .oms-search-result-item-details .oms-product-price { font-size: 12px; color: #555; }
+
+/* Payment Footer */
+.oms-payment-footer { margin-top: 20px; }
+.oms-payment-fields { display: flex; justify-content: flex-end; align-items: center; gap: 15px; margin-bottom: 20px; }
+.oms-payment-fields .oms-form-group { margin-bottom: 0; }
+.oms-payment-fields input { text-align: right; }
+.oms-grand-total-label { color: #d63638; }
+#oms-order-grandtotal { font-size: 18px; font-weight: 700; }
+.oms-save-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+.oms-save-actions .spinner { visibility: hidden; }
+.oms-save-actions.is-saving .spinner { visibility: visible; }
+.oms-response-message { text-align: right; margin-top: 10px; padding: 10px; border-radius: 4px; display: none; }
+.oms-response-message.success { display: block; background-color: #d4edda; color: #155724; }
+.oms-response-message.error { display: block; background-color: #f8d7da; color: #721c24; }
+
+/* --- Incomplete Order Delete Button --- */
+.oms-save-actions .button.button-link-delete {
+    color: #d63638;
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    text-decoration: underline;
+}
+.oms-save-actions .button.button-link-delete:hover {
+    color: #a71b2a;
+}
+#oms-delete-confirm-prompt .button-danger {
+    background-color: #d63638;
+    border-color: #d63638;
+    color: #fff;
+}
+
+
+/* --- Rebuilt Note Card Styles --- */
+.oms-note-card-rebuilt { display: flex; flex-direction: column; gap: 15px; }
+.oms-note-add-form { display: flex; flex-direction: column; gap: 10px; }
+.oms-note-add-form textarea { width: 100%; }
+.oms-note-add-form button { align-self: flex-start; }
+.oms-note-add-form .spinner { visibility: hidden; }
+.oms-note-history-rebuilt h4 { margin: 10px 0 5px; font-size: 14px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+.oms-note-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 15px; }
+.oms-note-item { background-color: #f8f9fa; padding: 12px; border-radius: 6px; border: 1px solid #e9ecef; }
+.oms-note-content p { margin: 0 0 8px; }
+.oms-note-meta { font-size: 12px; color: #6c757d; }
+
+/* --- Courier History Styles --- */
+.oms-courier-history-section { margin-bottom: 20px; }
+.oms-courier-history-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.oms-courier-card { background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 15px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.oms-courier-card h3 { margin-top: 0; margin-bottom: 10px; font-size: 16px; }
+.oms-courier-card strong { color: #2ca02c; }
+.oms-courier-breakdown { display: flex; justify-content: space-between; font-size: 12px; color: #666; margin-top: 5px; }
+.oms-breakdown-delivered { color: #28a745; }
+.oms-breakdown-canceled { color: #dc3545; }
+.oms-progress-bar { background-color: #e9ecef; border-radius: 4px; height: 8px; margin-top: 10px; overflow: hidden; }
+.oms-progress-fill { background-color: #28a745; height: 100%; transition: width 0.4s ease-in-out; }
+.oms-success-rate-badge { display: flex; align-items: center; gap: 5px; font-size: 14px; font-weight: 600; }
+.oms-success-rate-badge .oms-circle { width: 20px; height: 20px; border-radius: 50%; border: 3px solid; display: flex; justify-content: center; align-items: center; font-size: 12px; }
+.oms-rate-green { color: #28a745; border-color: #28a745; }
+.oms-rate-orange { color: #fd7e14; border-color: #fd7e14; }
+.oms-rate-red { color: #dc3545; border-color: #dc3545; }
+
+/* --- Workflow Info Bar Status Buttons --- */
+.oms-workflow-info-bar p { margin: 0 0 10px 0; }
+.oms-status-button-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.oms-status-button { padding: 5px 12px; border-radius: 15px; font-size: 13px; font-weight: 600; color: #fff; text-align: center; }
+.oms-status-button.status-processing { background-color: #2271b1; }
+.oms-status-button.status-completed { background-color: #00a32a; }
+.oms-status-button.status-on-hold { background-color: #f0ad4e; }
+.oms-status-button.status-failed { background-color: #d9534f; }
+.oms-status-button.status-cancelled { background-color: #777; }
+.oms-status-button.status-refunded { background-color: #333; }
+.oms-status-button.status-pending { background-color: #ffba00; color: #333; }
+.oms-status-button.status-no-response, .oms-status-button.status-shipped, .oms-status-button.status-delivered, .oms-status-button.status-returned, .oms-status-button.status-partial-return, .oms-status-button.status-warehouse, .oms-status-button.status-exchange, .oms-status-button.status-ready-to-ship { /* Injected via PHP */ }
+
+/* Pathao Location Design */
+.oms-pathao-location-section { margin-top: 25px; padding-top: 20px; border-top: 1px solid #e0e0e0; }
+.oms-pathao-heading { font-size: 14px; margin-top: 0; margin-bottom: 15px; }
+.oms-pathao-location-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; align-items: end; }
+.oms-pathao-location-grid .oms-form-group { margin-bottom: 0; }
+
+/* --- **NEW** Settings Page Styles --- */
+.oms-tab-content { display: none; }
+.oms-tab-content.active { display: block; }
+#courier-form-fields .courier-type-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.courier-item { display: flex; justify-content: space-between; align-items: center; }
+.courier-type-badge { display: inline-block; padding: 2px 8px; font-size: 11px; border-radius: 4px; color: #fff; text-transform: capitalize; }
+.courier-type-badge.type-steadfast { background-color: #e67e22; }
+.courier-type-badge.type-pathao { background-color: #e74c3c; }
+.oms-tools-section .oms-card, #oms-tools .oms-card { margin-top: 20px; }
+#oms-sync-status, #oms-cache-status { margin-top: 15px; font-style: italic; color: #555; }
+#oms-sync-progress-bar-container { background-color: #e0e0e0; border-radius: 4px; overflow: hidden; height: 20px; margin-top: 5px; display: none; }
+#oms-sync-progress-bar { background-color: #2271b1; height: 100%; width: 0%; transition: width 0.3s ease-in-out; }
