@@ -101,6 +101,10 @@ final class Order_Management_Summary {
         
         $woocommerce = new OMS_Woocommerce();
         $woocommerce->load_hooks();
+
+        // **FIX**: Instantiate the classes to run their constructor hooks.
+        new OMS_Custom_Order_Statuses();
+        new OMS_Incomplete_Orders();
     }
 }
 
